@@ -15,7 +15,7 @@ on:
       name:
         description: 'Person to greet'
         required: true
-        default: 'Lede_psg1208_K2'
+        default: 'build-openwrt'
 
 
 #编辑任意指定文件触发开始编译
