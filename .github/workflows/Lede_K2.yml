@@ -7,7 +7,7 @@
 #
 
 
-name: 编译Lede_psg1208_K2
+name: 编译Lede_K2
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ on:
       name:
         description: 'Person to greet'
         required: true
-        default: 'build-openwrt'
+        default: 'Lede_K2'
 
 
 #编辑任意指定文件触发开始编译
@@ -45,13 +45,13 @@ env:
 jobs: 
   build:
     runs-on: ubuntu-18.04
-    if: github.event.repository.owner.id == github.event.sender.id
+    if: github.event.repository.owner.id == github.event.sender.idbuild-openwrt
 
     name: 编译 ${{matrix.target}}
     strategy:
       fail-fast: false
       matrix:
-        target: [Lede_psg1208_K2]
+        target: [Lede_K2]
 
     steps:
     - name: 准备结束
